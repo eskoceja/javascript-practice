@@ -26,34 +26,32 @@ function playRound(player1, player2) {
   if (player1Hand === "rock") {
     if (player2Hand === "paper") {
       console.log(player2.name + " wins with paper against rock.");
-      return player1Hand;
+      return player2Hand;
     } else if (player2Hand === "scissors") {
       console.log(player1.name + " wins with rock against scissors.");
       return player1Hand;
-    } 
-
-
-  } else if (player2Hand === "rock") {
-    if (player1Hand === "paper") {
-      console.log(player1.name + " wins with paper against rock.");
-      return player2Hand;
-    } else if (player1Hand === "scissors") {
-      console.log(player2.name + " wins with rock against scissors.");
-      return player2Hand;
     }
   } 
   
   else if (player1Hand === "paper") {
-    if (player2Hand === "scissors") {
-      console.log(player2.name + " wins with scissors against paper.")
+    if (player2Hand === "rock") {
+      console.log(player1.name + " wins with paper against rock.");
+      return player1Hand;
+    } else if (player2Hand === "scissors") {
+      console.log(player2.name + " wins with scissors againts paper.");
+      return player2Hand;
     }
-  }
-
-  else if (player2Hand === "paper") {
-    if (player1Hand === "scissors") {
-      console.log(player1.name + " wins with scissors against paper.")
+  } 
+  
+  else if (player1Hand === "scissors") {
+    if (player2Hand === "rock") {
+      console.log(player2.name + " wins with rock against scissors.");
+      return player2Hand;
+    } else if (player2Hand === "paper") {
+      console.log(player1.name + " wins with scissors against paper.");
+      return player1Hand;
     }
-  }
+  } 
   
   else {
     console.log("It's a tie!");
