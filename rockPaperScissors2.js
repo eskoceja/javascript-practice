@@ -84,15 +84,18 @@ function playGame(playerOne, playerTwo, playUntil) {
   let p2W = 0;
 
   while (p1W < playUntil && p2W < playUntil) {
-    let roundOneWinner = playRound(playerOne, playerTwo);
+    const roundWinner = playRound(playerOne, playerTwo);
 
-    if (roundOneWinner === playerOne) {
-      p1W++;
-    } else {
-      p2W++;
+    if (roundWinner) {
+      if (roundWinner.name === playerOne.name) {
+        p1W++;
+      } else {
+        p2W++;
+      }
     }
   }
-  return p1W > p2W ? player1 : player2;
+
+  return p1W > p2W ? playerOne : playerTwo;
 }
 
 // playGame(playerA, playerB, 5);
