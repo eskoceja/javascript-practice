@@ -4,14 +4,14 @@ function getHand() {
   return hands[parseInt(Math.random() * 10) % 3];
 }
 
-let player1 = { name: "Blake", getHand: getHand, wins: 0 };
-let player2 = { name: "Emily", getHand: getHand, wins: 0 };
-let player3 = { name: "Tyler", getHand: getHand, wins: 0 };
-let player4 = { name: "Jacob", getHand: getHand, wins: 0 };
+let blake = { name: "Blake", getHand: getHand, wins: 0 };
+let emily = { name: "Emily", getHand: getHand, wins: 0 };
+let tyler = { name: "Tyler", getHand: getHand, wins: 0 };
+let jacob = { name: "Jacob", getHand: getHand, wins: 0 };
 
 function playRound(p1, p2) {
-  let player1Hand = player1.getHand();
-  let player2Hand = player2.getHand();
+  let player1Hand = p1.getHand();
+  let player2Hand = p2.getHand();
   // let winner = null;
 
   if (player1Hand === "rock") {
@@ -103,23 +103,30 @@ function playGame(playerOne, playerTwo, playUntil) {
 // Play a game between the winners of the first round.
 // Announce the tournament winner's name "[name] is the world champion";
 
-function playTournament(player_One, player_Two, player_Three, player_Four, playUntil) {
-
+function playTournament(
+  player_One,
+  player_Two,
+  player_Three,
+  player_Four,
+  playUntil
+) {
   let firstRound = playGame(player_One, player_Two, playUntil);
-  console.log(`The winner is  ${firstRound.name}!`);
+  console.log(`The winner is ${firstRound.name}!`);
+  console.log("");
   firstRound.wins = 0;
   // console.log(`${firstRound.name} wins first round tournament!`);
 
   let secondRound = playGame(player_Three, player_Four, playUntil);
   // console.log(`${secondRound.name} wins second round tournament!`);
-  console.log(`The winner is  ${secondRound.name}!`);
+  console.log(`The winner is ${secondRound.name}!`);
+  console.log("");
   secondRound.wins = 0;
 
   let finalRound = playGame(firstRound, secondRound, playUntil);
   console.log(`${finalRound.name} is world champion!!`);
 }
 
-playTournament(player1, player2, player3, player4, 3);
+playTournament(blake, emily, tyler, jacob, 3);
 
 // let firstRound = playGame(first, second, playUntil);
 // console.log("The winner is " + firstRound.name + "!");
