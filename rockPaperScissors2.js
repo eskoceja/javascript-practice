@@ -104,6 +104,7 @@ function playGame(playerOne, playerTwo, playUntil) {
 // Announce the tournament winner's name "[name] is the world champion";
 
 function playTournament(player_One, player_Two, player_Three, player_Four, playUntil) {
+
   let firstRound = playGame(player_One, player_Two, playUntil);
   console.log(`The winner is  ${firstRound.name}!`);
   firstRound.wins = 0;
