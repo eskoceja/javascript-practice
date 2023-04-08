@@ -69,7 +69,7 @@ function playRound(p1, p2) {
     }
   }
   // return winner;
-  return playGame();
+  return null;
 }
 
 // playRound(player1, player2);
