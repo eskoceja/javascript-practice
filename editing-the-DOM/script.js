@@ -29,4 +29,4 @@ for (i = 0; i < newList.length; i++) {
 
 // Add the class 'important' to the almonds item.
 const almonds = document.getElementsByTagName("li")[1];
-almonds.class = "important";
+almonds.className = "important";
