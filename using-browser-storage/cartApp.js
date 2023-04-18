@@ -23,7 +23,7 @@ function addItem(item) {
 //and then stores the updated cart back into localStorage.
 function removeItem(itemId) {
   const cart = JSON.parse(localStorage.getItem("cart"));
-  cart.removeItem(itemId);
+  const updateCart = cart.filter(item => item.id !== id);
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
