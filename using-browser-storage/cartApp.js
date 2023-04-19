@@ -9,6 +9,8 @@ function initializeCart() {
   }
 }
 
+initializeCart();
+
 //retrieves the cart from localStorage,
 //adds the item to the cart,
 //and then stores the updated cart back into localStorage.
