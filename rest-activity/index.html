@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rest Assignment</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Rest Assignment</h1>
+    <p>What even is rest when in this program?</p>
+
+    <ul>
+      <!-- Button to Get all posts -->
+      <li><button id="getAll" class="btn">Get All Posts</button></li>
+
+      <!-- Button to Get post with id of 10 -->
+      <li><button id="getTen" class="btn">Get ID 10</button></li>
+
+      <!-- Button to Create a new post and log the id generated for it by the server -->
+      <li>
+        <button id="createPost" class="btn">Create Post</button>
+      </li>
+
+      <!-- Button to Replace the post with id of 12 and render the responseJSON -->
+      <li>
+        <button id="replacePost" class="btn">Replace Post</button>
+      </li>
+
+      <!-- Button to Update the title of post with id of 12 and render responseJSON -->
+      <li>
+        <button id="updatePost" class="btn">Update Post</button>
+      </li>
+
+      <!-- Button to Delete the post with id of 12 and render a success message -->
+      <li><button id="deletePost" class="btn">Delete Post</button></li>
+    </ul>
+    <span id="results"></span>
+
+    <script src="script.js"></script>
+  </body>
+</html>
