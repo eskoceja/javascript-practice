@@ -1,4 +1,23 @@
+body {
+  text-align: center;
+  background-color: #8ecae6;
+  color: #023047;
+}
+
 li {
   list-style-type: none;
   margin: 10px 0;
+}
+
+.btn {
+  background-color: #fb8500;
+  border-radius: 15px;
+  color: #fff;
+}
+
+.btn:hover, .btn:focus {
+  background-color: #ffb703;
+  color: #023047;
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
 }

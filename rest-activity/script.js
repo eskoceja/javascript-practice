@@ -78,12 +78,12 @@ const updatePost = document
   .addEventListener("click", updateThePost);
 
 function updateThePost() {
-  fetch("http://jsonplaceholder.typicode.com/posts/12", {
+  fetch("https://jsonplaceholder.typicode.com/posts/12", {
     method: "PATCH",
     body: JSON.stringify({
-      title: "UPDATED TITLE FOR ID OF 12 AGAIN",
-      body: "REPLACED 12 USING PUT",
-      userId: 9999,
+      title: "UPDATED TITLE FOR ID OF 12",
+      body: "USING PATCH TO UPDATE",
+      userId: 1,
     }),
     headers: {
       "Content-type": "application/json; charset=UTF-8",
@@ -103,7 +103,7 @@ const deletePost = document
   .getElementById("deletePost")
   .addEventListener("click", deleteThePost);
 function deleteThePost() {
-  fetch("http://jsonplaceholder.typicode.com/posts/12", {
+  fetch("https://jsonplaceholder.typicode.com/posts/12", {
     method: "DELETE",
   })
     .then((response) => response.json())
