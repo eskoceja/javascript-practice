@@ -10,7 +10,8 @@ const getAll = document
   .getElementById("getAll")
   .addEventListener("click", getAllPosts);
 function getAllPosts() {
-  fetch("http://jsonplaceholder.typicode.com/posts")
+  // fetch("http://jsonplaceholder.typicode.com/posts")
+  fetch("https://jsonplaceholder.typicode.com/posts")
     .then((response) => response.json())
     .then((posts) => (results.innerHTML = JSON.stringify(posts)))
     .catch((error) => console.log(error));
@@ -21,7 +22,8 @@ const getTen = document
   .getElementById("getTen")
   .addEventListener("click", getIdTen);
 function getIdTen() {
-  fetch("http://jsonplaceholder.typicode.com/posts/10")
+  // fetch("http://jsonplaceholder.typicode.com/posts/10")
+  fetch("https://jsonplaceholder.typicode.com/posts/10")
     .then((response) => response.json())
     .then((post10) => (results.innerHTML = JSON.stringify(post10)))
 
