@@ -3,10 +3,10 @@ let numbers1 = [1, 2, 3, 4, 5, 6];
 let numbers2 = [10, 15, 20, 25, 30, 35];
 
 // Use the spread operator to create an array called numbers that combines the elements of numbers1 and numbers2.
-const spread = [...numbers1, ...numbers2];
+const numbers = [...numbers1, ...numbers2];
 
 console.log("Spread Operator combining varibles numbers1 and numbers2:");
-console.log(spread);
+console.log(numbers);
 console.log(" ");
 
 // Define an arrow function called square that accepts a number as an argument and returns the square of the number.
@@ -15,7 +15,7 @@ const square = (x) => {
 };
 
 // Use the map method to create a new array called squares that contains the squares of the numbers in the numbers array.
-const squares = spread.map(square);
+const squares = numbers.map(square);
 
 console.log("Using the map method to get the squares of the spread array:");
 console.log(squares);
